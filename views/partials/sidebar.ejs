@@ -1,0 +1,32 @@
+<aside class="sidebar">
+
+    <div class="logo">
+        <h1>TaskFlow</h1>
+        <p>Organize your work</p>
+    </div>
+
+    <nav class="menu">
+        <a href="/" style="text-decoration: none">
+            <div class="menu-item <%= currentpage === 'dashboard' ? 'active' : ''%>">
+                <span>Dashboard</span>
+            </div>
+        </a>
+
+        <a href="/Tasks" style="text-decoration: none">
+            <div class="menu-item <%= currentpage === 'Tasks' ? 'active' : ''%>">
+                <span>Tasks</span>
+            </div>
+        </a>
+
+        <a href="/project" style="text-decoration: none">
+            <div class="menu-item <%= currentpage === 'project' ? 'active' : ''%>">
+                <span>Projects</span>
+            </div>
+        </a>
+
+    </nav>
+    <button class="new-task-btn" id="addtask">
+        New Task
+    </button>
+
+</aside>

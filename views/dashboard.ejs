@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/dashboard.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="/newtaskpopup.css">
+</head>
+
+<body>
+    <div class="main">
+        <!-- Sidebar -->
+        <%-include('partials/sidebar.ejs',{currentpage : "dashboard"})%>
+
+            <div class="dashboard">
+                <div class="dash-title">
+                    <h1>Dashboard</h1>
+                    <p>Welcome back! Here is your task overview</p>
+                </div>
+
+                <div class="sumary">
+                    <%- include('partials/totaltask.ejs',{users}) %>
+                    <%- include('partials/todotask.ejs',{users}) %>
+                    <%- include('partials/Inprogress.ejs',{users}) %>
+                    <%- include('partials/donetask.ejs',{users}) %>
+                </div>
+                <div class="bottom ">
+                    <div class="leftdash">
+                        <h2>Today's Tasks</h2>
+                        <% users.forEach(function(user) {%>
+                            <%const userDate = new Date(user.dueDate).toLocaleDateString('en-CA') %>
+                            <%if(dateOnly === userDate){%>
+                                <%- include('partials/taskcard.ejs',{user}) %>
+                            <%}%>
+                        <% })%>
+                    </div>
+                    <div class="over-due">
+                        <h2>OverDue Tasks</h2>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <%-include('partials/newtaskpopup.ejs')%>
+        <script src="/dashboard.js"></script>
+</body>
+
+</html>

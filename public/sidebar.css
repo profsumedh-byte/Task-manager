@@ -1,0 +1,68 @@
+.sidebar {
+    width: 15vw;
+    height: 100vh;
+    background: #f5f7fb;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #e0e6ed;
+    position:fixed;
+}
+.logo h1 {
+    font-size: 22px;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* Menu */
+.menu {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Menu Items */
+.menu-item {
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #475569;
+    transition: 0.2s;
+}
+
+/* Hover */
+.menu-item:hover {
+    background: #e8edf7;
+}
+
+/* Active (manually add class="menu-item active") */
+.menu-item.active {
+    background: #dbe5ff;
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+/* Button */
+.new-task-btn {
+    margin-top: auto;
+    padding: 14px;
+    background: #020617;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+/* Button Hover */
+.new-task-btn:hover {
+    background: #0f172a;
+}

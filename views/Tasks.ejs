@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="Tasks.css">
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+
+<div class="container">
+    <%-include('partials/sidebar.ejs',{currentpage : "Tasks"})%>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <h1>All Tasks</h1>
+    <p class="desc">Manage and organize your tasks</p>
+
+    <!-- Filters -->
+    <div class="filters">
+      <input id="searchbox" name="searchtask" type="text" placeholder="Search tasks...">
+      <select id="priority">
+        <option >All Priorities</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <select>
+        <option>All Projects</option>
+      </select>
+    </div>
+
+    <!-- Status Summary -->
+    <div class="summary">
+      <span class="badge">To Do: 3</span>
+      <span class="badge blue">In Progress: 1</span>
+      <span class="badge green">Completed: 1</span>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <span class="active">All (5)</span>
+      <span>To Do (3)</span>
+      <span>In Progress (1)</span>
+      <span>Completed (1)</span>
+    </div>
+
+    <!-- Task Cards -->
+    <div id="taskContainer">
+      <%users.forEach((user)=>{%>
+      <%- include('partials/taskcard.ejs',{user}) %>
+      <%})%>
+    </div>
+    
+
+  </main>
+</div>
+<script src="/tasks2.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+}
+
+/* Layout */
+.container {
+  display: flex;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 30px;
+  padding-left: 16vw;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.new-project {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Projects Grid */
+.projects {
+  
+  display: flex;
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-top: 4px solid;
+}
+
+.card.blue {
+  border-color: #2563eb;
+}
+
+.card.green {
+  border-color: #10b981;
+}
+
+.card.orange {
+  border-color: #f59e0b;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desc {
+  color: gray;
+  margin: 10px 0;
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.badges span {
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.badges .blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.badges .green {
+  background: #d1fae5;
+  color: #059669;
+}
+
+/* Task List */
+.tasks {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.tasks li {
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.tasks li::before {
+  content: "• ";
+  color: #2563eb;
+}
+
+.tasks li.done {
+  text-decoration: line-through;
+  color: gray;
+}

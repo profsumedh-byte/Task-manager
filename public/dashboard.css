@@ -1,0 +1,207 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Layout */
+.main {
+    display: flex;
+}
+
+/* Main dashboard area */
+.dashboard {
+    flex: 1;
+    padding: 30px;
+    background: #f8fafc;
+    padding-left: 16vw;
+}
+
+/* Title section */
+.dash-title h1 {
+    font-size: 28px;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.dash-title p {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* Summary cards container */
+.sumary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    transition: 0.2s;
+}
+
+/* Hover effect */
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Left side */
+.card-left .title {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.card-left .count {
+    font-size: 26px;
+    color: #0f172a;
+    margin-top: 5px;
+}
+
+/* Right icon box */
+.card-right {
+    width: 45px;
+    height: 45px;
+    background: #eef2ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icon */
+.card-right i {
+    font-size: 18px;
+    color: #3b82f6;
+}
+
+/* Sections below */
+.today-task,
+.over-due {
+    margin-top: 30px;
+}
+.over-due h2{
+    color: red;
+}
+.leftdash{
+    margin-top: 30px;
+}
+
+.bottom{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 40px;
+}
+
+/* Today Task Section */
+.today-task {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    gap: 20px;
+}
+
+/* Task Card */
+.task-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    transition: 0.2s;
+}
+
+/* Hover */
+.task-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Title */
+.task-top h3 {
+    font-size: 18px;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Flag */
+.flag {
+    color: orange;
+    font-size: 14px;
+}
+
+/* Description */
+.desc {
+    color: #64748b;
+    margin: 10px 0 15px;
+    font-size: 14px;
+}
+
+/* Bottom layout */
+.task-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tags container */
+.tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Tag base */
+.tag {
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* Status tag */
+.status {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+/* Work tag */
+.work {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+/* Date */
+.date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* Icons */
+.edit {
+    cursor: pointer;
+    color: #0f172a;
+}
+
+.delete {
+    cursor: pointer;
+    color: red;
+}

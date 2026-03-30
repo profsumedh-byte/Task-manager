@@ -1,0 +1,27 @@
+<div class="task-card">
+
+    <div class="task-top">
+        <h3><%=user.title%><i class="fa-solid fa-flag flag"></i></h3>
+    </div>
+
+    <p class="desc"><%=user.description%></p>
+
+    <div class="task-bottom">
+
+        <div class="tags">
+            <span class="tag status"><%=user.priority%></span>
+            <span class="tag work"><%=user.project%></span>
+            <span class="date">
+                <i class="fa-regular fa-calendar"></i>
+                <%=user.dueDate%>
+            </span>
+        </div>
+
+        <div class="actions">
+            <i class="fa-solid fa-pen edit"></i>
+            <i class="fa-solid fa-trash delete"></i>
+        </div>
+
+    </div>
+
+</div>

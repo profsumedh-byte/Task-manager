@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects</title>
+  <link rel="stylesheet" href="Project.css">
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+
+<div class="container">
+
+    <%-include('partials/sidebar.ejs',{currentpage : "project"})%>
+  <!-- Main -->
+  <main class="main">
+
+    <div class="header">
+      <div>
+        <h1>Projects</h1>
+        <p>Organize your tasks by project</p>
+      </div>
+      <button class="new-project">+ New Project</button>
+    </div>
+
+    <!-- Project Cards -->
+    <div class="projects">
+
+      <!-- Work -->
+      <div class="card blue">
+        <div class="card-top">
+          <div>
+            <h3>Work</h3>
+            <p>3 tasks</p>
+          </div>
+          <div class="icons">✏️ 🗑️</div>
+        </div>
+
+        <p class="desc">Work-related tasks</p>
+
+        <div class="badges">
+          <span>1 To Do</span>
+          <span class="blue">1 In Progress</span>
+          <span class="green">1 Done</span>
+        </div>
+
+        <ul class="tasks">
+          <li>Complete project proposal</li>
+          <li>Team meeting</li>
+          <li class="done">Update documentation</li>
+        </ul>
+      </div>
+
+      <!-- Personal -->
+      <div class="card green">
+        <div class="card-top">
+          <div>
+            <h3>Personal</h3>
+            <p>1 tasks</p>
+          </div>
+          <div class="icons">✏️ 🗑️</div>
+        </div>
+
+        <p class="desc">Personal tasks</p>
+
+        <div class="badges">
+          <span>1 To Do</span>
+          <span class="blue">0 In Progress</span>
+          <span class="green">0 Done</span>
+        </div>
+
+        <ul class="tasks">
+          <li>Gym workout</li>
+        </ul>
+      </div>
+
+      <!-- Shopping -->
+      <div class="card orange">
+        <div class="card-top">
+          <div>
+            <h3>Shopping</h3>
+            <p>1 tasks</p>
+          </div>
+          <div class="icons">✏️ 🗑️</div>
+        </div>
+
+        <p class="desc">Shopping lists</p>
+
+        <div class="badges">
+          <span>1 To Do</span>
+          <span class="blue">0 In Progress</span>
+          <span class="green">0 Done</span>
+        </div>
+
+        <ul class="tasks">
+          <li>Grocery shopping</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>

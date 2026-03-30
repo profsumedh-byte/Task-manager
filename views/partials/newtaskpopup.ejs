@@ -1,0 +1,62 @@
+
+
+<!-- Modal -->
+<div id="taskModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">close</span>
+
+    <h2>Create New Task</h2>
+    <p>Fill in the details to create a new task.</p>
+
+    <form id="taskForm" action="/Tasks" method="POST">
+      
+      <label>Title</label>
+      <input type="text" name="title" placeholder="Enter task title" required>
+
+      <label>Description</label>
+      <textarea name="description" placeholder="Enter task description"></textarea>
+
+      <div class="row">
+        <div>
+          <label>Status</label>
+          <select name="status">
+            <option>To Do</option>
+            <option>In Progress</option>
+            <option>Done</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Priority</label>
+          <select name="priority">
+            <option>Low</option>
+            <option selected>Medium</option>
+            <option>High</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Due Date</label>
+          <input type="date" name="dueDate">
+        </div>
+
+        <div>
+          <label>Project</label>
+          <select name="project">
+            <option>No Project</option>
+            <option>Work</option>
+            <option>Personal</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" id="cancelBtn">Cancel</button>
+        <button type="submit" class="primary">Create Task</button>
+      </div>
+
+    </form>
+  </div>
+</div>
